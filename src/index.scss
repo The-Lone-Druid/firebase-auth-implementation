@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url("../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Loader css */
+.loader {
+  background: #00011ba1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+// Default css
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
