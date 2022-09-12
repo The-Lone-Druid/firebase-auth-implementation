@@ -5,6 +5,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import Loader from "../components/Loader";
 import { useAppDispatch } from "../app/hooks";
 import { setAuthState } from "../features/auth/authSlice";
+import Header from "../components/Header";
 
 type Props = {};
 
@@ -28,8 +29,14 @@ const AppLayout = (props: Props) => {
   }, [navigate]);
 
   return (
-    <div className="bg-dark text-white">
-      {isLoading ? <Loader type="full" /> : <Outlet />}
+    <div className="bg-dark text-white vh-100 overflow-hidden d-flex flex-column">
+      {isLoading && <Loader type="full" />}
+      <Header />
+      <div className="overflow-y-auto felx-fill py-5">
+        <div className="container">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 };

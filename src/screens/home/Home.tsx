@@ -11,7 +11,7 @@ const Home = (props: Props) => {
   const currentUser = useAppSelector(selectAuthData);
 
   return (
-    <div className="p-3 vh-100">
+    <div>
       <h1 className="display-4 fw-bold">{currentUser?.displayName}</h1>
       <h4 className="fw-bold">{currentUser?.email}</h4>
       <button

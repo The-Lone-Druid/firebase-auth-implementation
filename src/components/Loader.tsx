@@ -7,7 +7,12 @@ type Props = {
 
 const Loader = (props: Props) => {
   return (
-    <div className="position-fixed vh-100 w-100 loader d-flex align-items-center justify-content-center">
+    <div
+      className={`position-fixed vh-100 w-100 loader d-flex align-items-center justify-content-center 
+      ${props.type === "full" ? "full" : ""} ${
+        props.type === "transparent" ? "transparent" : ""
+      }`}
+    >
       <ReactLoading
         type={"spinningBubbles"}
         color={"#00d9ff"}
